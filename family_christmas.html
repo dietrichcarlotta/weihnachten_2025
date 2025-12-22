@@ -1,0 +1,201 @@
+
+  <!DOCTYPE html>
+  <html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Federo&display=swap" rel="stylesheet">
+    <style>
+      body { 
+        background: url("https://images.unsplash.com/photo-1736034592895-da02e60844e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center fixed; 
+        background-size: cover; font-family: "Federo", sans-serif;
+        margin: 0; min-height: 100vh; color: #5e0b0b; padding: 60px 20px;
+      }
+      .family-section { display: flex; flex-direction: column; align-items: center; margin-bottom: 80px; }
+      .title-box h1 { 
+        font-size: 42px; color: #5e0b0b; padding: 10px 40px;
+        background: rgba(255, 255, 255, 0.5); border-radius: 5px;
+        margin-bottom: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      }
+      .gallery { 
+        display: flex; flex-wrap: wrap; justify-content: center; 
+        align-items: center; gap: 30px; max-width: 1300px; 
+      }
+      .scene { width: 180px; height: 240px; perspective: 1000px; }
+      .main-scene { width: 280px; height: 360px; }
+      .card { width: 100%; height: 100%; position: relative; transition: transform 0.6s; transform-style: preserve-3d; cursor: pointer; }
+      .card.is-flipped { transform: rotateY(180deg); }
+      .card__face {
+        position: absolute; width: 100%; height: 100%; backface-visibility: hidden;
+        border: 10px solid white; box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
+        display: flex; flex-direction: column; align-items: center; background: white; border-bottom-width: 35px;
+      }
+      .main-card .card__face { border-width: 15px; border-bottom-width: 50px; }
+      .img-container { width: 100%; height: 75%; overflow: hidden; background: #eee; }
+      .img-container img { width: 100%; height: 100%; object-fit: cover; }
+      h3 { margin: 8px 0 0 0; font-size: 18px; color: #5e0b0b; }
+      .card__face--back { transform: rotateY(180deg); color: #5e0b0b; padding: 20px; text-align: center; justify-content: center; font-size: 16px; }
+      .divider { width: 80%; border: 0; height: 1px; background-image: linear-gradient(to right, rgba(94, 11, 11, 0), rgba(94, 11, 11, 0.5), rgba(94, 11, 11, 0)); margin: 60px auto; }
+    </style>
+  </head>
+  <body>
+    
+      <section class="family-section">
+        <div class="title-box"><h1>Für Moritz</h1></div>
+        <div class="gallery">
+    <div class="scene main-scene" style="transform: rotate(-1.20563033502549deg);">
+      <div class="card main-card" onclick="this.classList.toggle('is-flipped')">
+        <div class="card__face card__face--front">
+          <div class="img-container"><img src="https://i.pinimg.com/736x/9b/74/f3/9b74f37b52946f8b288cebe437559b89.jpg"></div>
+          <h3>Fröhliche Weihnachten</h3>
+        </div>
+        <div class="card__face card__face--back">
+          <p>Dein Brief...</p>
+        </div>
+      </div>
+    </div>
+    <div class="scene " style="transform: rotate(-2.74151094350964deg);">
+      <div class="card" onclick="this.classList.toggle('is-flipped')">
+        <div class="card__face card__face--front">
+          <div class="img-container"><img src="https://detail-cdn.s3.eu-central-1.amazonaws.com/media/catalog/product/d/e/detail_d_10_2025_560x792px.jpg?width=320&height=400&store=de_de&image-type=small_image"></div>
+          <h3>Teil 1</h3>
+        </div>
+        <div class="card__face card__face--back">
+          <p>Probeabo: <br><br> Du bekommst in den nächsten drei Monaten zwei Ausgaben) 
+                         vom Detail-Magazin zugeschickt. <br><br> Ich hoffe sie sind voller Inspiration und 
+                         schöner Dinge</p>
+        </div>
+      </div>
+    </div>
+    <div class="scene " style="transform: rotate(-2.20135332690552deg);">
+      <div class="card" onclick="this.classList.toggle('is-flipped')">
+        <div class="card__face card__face--front">
+          <div class="img-container"><img src="https://i.pinimg.com/1200x/73/78/d0/7378d0ce4bc1835e49660dd05d436b4c.jpg"></div>
+          <h3>Teil 2</h3>
+        </div>
+        <div class="card__face card__face--back">
+          <p>Ich habe zwei Links für dich. <br><br> Ich fand es mega spannend und dann wird in dir
+                        vielleicht ja auch gleich ein bisschen Lust auf Origami geweckt, daher hier auch 
+                         noch etwas Praktisches. <br><br>
+                         Doku: https://youtu.be/ThwuT3_AG6w?si=pxUG2KHI9RtSofSn
+                         Anleitung: https://youtu.be/1YSEDUwd84A?si=03gBI1EbJLEXepyD</p>
+        </div>
+      </div>
+    </div>
+    <div class="scene " style="transform: rotate(-1.11084644822404deg);">
+      <div class="card" onclick="this.classList.toggle('is-flipped')">
+        <div class="card__face card__face--front">
+          <div class="img-container"><img src="https://content.fortune.com/wp-content/uploads/2020/01/IMG_4722-copy.jpg?w=1440&q=75"></div>
+          <h3>Teil 3</h3>
+        </div>
+        <div class="card__face card__face--back">
+          <p>Such dir einen schönen Stift aus und schick mir dann ein Foto
+                         von der Rechnung. <br><br> Ich paypale dir den Betrag <br><br>(bis zu 5 Euro) :)</p>
+        </div>
+      </div>
+    </div></div>
+      </section>
+    <hr class='divider'>
+      <section class="family-section">
+        <div class="title-box"><h1>Für Mama</h1></div>
+        <div class="gallery">
+    <div class="scene main-scene" style="transform: rotate(-2.82029959140345deg);">
+      <div class="card main-card" onclick="this.classList.toggle('is-flipped')">
+        <div class="card__face card__face--front">
+          <div class="img-container"><img src="https://i.pinimg.com/736x/f4/68/11/f468115d6b69741754dc5ce3d1737bd9.jpg"></div>
+          <h3>Frohes Fest</h3>
+        </div>
+        <div class="card__face card__face--back">
+          <p>Dein Brief...</p>
+        </div>
+      </div>
+    </div>
+    <div class="scene " style="transform: rotate(-2.29245054675266deg);">
+      <div class="card" onclick="this.classList.toggle('is-flipped')">
+        <div class="card__face card__face--front">
+          <div class="img-container"><img src="https://feels-like-erfurt.de/wp-content/uploads/2020/08/photo_2020-08-14_10-38-35-1024x576.jpg"></div>
+          <h3>Teil 1</h3>
+        </div>
+        <div class="card__face card__face--back">
+          <p>Gutschein</p>
+        </div>
+      </div>
+    </div>
+    <div class="scene " style="transform: rotate(1.9858966441825deg);">
+      <div class="card" onclick="this.classList.toggle('is-flipped')">
+        <div class="card__face card__face--front">
+          <div class="img-container"><img src="https://i.pinimg.com/736x/67/e8/0e/67e80e863600a3ad3dcf4aa491db1916.jpg"></div>
+          <h3>zu Teil 1</h3>
+        </div>
+        <div class="card__face card__face--back">
+          <p>Neues Kochbuch von ...</p>
+        </div>
+      </div>
+    </div>
+    <div class="scene " style="transform: rotate(-0.514959541149437deg);">
+      <div class="card" onclick="this.classList.toggle('is-flipped')">
+        <div class="card__face card__face--front">
+          <div class="img-container"><img src="https://images.unsplash.com/photo-1563223771-5fe4038fbfc9?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
+          <h3>Teil 2</h3>
+        </div>
+        <div class="card__face card__face--back">
+          <p>Ein Spaßgetränk <br><br> (Subst.) ein alkoholisches oder nicht-alkoholisches
+                         Getränk, was lecker schmeckt und den Moment besonders macht <br><br>
+                         Gönn' dir mal was besonderes, schick mir danach die Rechnung und du bekommst das Geld ;) <br><br> (bis zu 10 Euro)</p>
+        </div>
+      </div>
+    </div></div>
+      </section>
+    <hr class='divider'>
+      <section class="family-section">
+        <div class="title-box"><h1>Für Papa</h1></div>
+        <div class="gallery">
+    <div class="scene main-scene" style="transform: rotate(2.2840684633702deg);">
+      <div class="card main-card" onclick="this.classList.toggle('is-flipped')">
+        <div class="card__face card__face--front">
+          <div class="img-container"><img src="https://i.pinimg.com/1200x/ef/ed/e3/efede3c85ba879a8dd8684759477564a.jpg"></div>
+          <h3>Merry Christmas</h3>
+        </div>
+        <div class="card__face card__face--back">
+          <p>Dein Brief...</p>
+        </div>
+      </div>
+    </div>
+    <div class="scene " style="transform: rotate(0.565470500383526deg);">
+      <div class="card" onclick="this.classList.toggle('is-flipped')">
+        <div class="card__face card__face--front">
+          <div class="img-container"><img src="https://i.pinimg.com/736x/29/5a/e4/295ae44dd2da4878a8f1496494acf599.jpg"></div>
+          <h3>Teil 1</h3>
+        </div>
+        <div class="card__face card__face--back">
+          <p>Fundgrube</p>
+        </div>
+      </div>
+    </div>
+    <div class="scene " style="transform: rotate(-2.02316306903958deg);">
+      <div class="card" onclick="this.classList.toggle('is-flipped')">
+        <div class="card__face card__face--front">
+          <div class="img-container"><img src="https://i.pinimg.com/736x/59/04/b5/5904b54de064518b7fc9251a9b8cdc36.jpg"></div>
+          <h3>zu Teil 1</h3>
+        </div>
+        <div class="card__face card__face--back">
+          <p>Woodstock</p>
+        </div>
+      </div>
+    </div>
+    <div class="scene " style="transform: rotate(0.113862432539463deg);">
+      <div class="card" onclick="this.classList.toggle('is-flipped')">
+        <div class="card__face card__face--front">
+          <div class="img-container"><img src="https://images.unsplash.com/photo-1609951651556-5334e2706168?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
+          <h3>Teil 2</h3>
+        </div>
+        <div class="card__face card__face--back">
+          <p>Ein Spaßgetränk <br><br> (Subst.) ein alkoholisches oder nicht-alkoholisches
+                         Getränk, was lecker schmeckt und den Moment besonders macht <br><br>
+                         Gönn' dir mal was besonderes, schick mir danach die Rechnung und du bekommst das Geld ;)<br><br> (bis zu 10 Euro)</p>
+        </div>
+      </div>
+    </div></div>
+      </section>
+    
+  </body>
+  </html>
